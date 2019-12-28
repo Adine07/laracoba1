@@ -28,7 +28,7 @@ Route::get('/category/edit/{id}', 'CategoryController@edit');
 
 Route::post('/category/update/{id}', 'CategoryController@update');
 
-Route::get('/category/delete/{id}', 'CategoryController@delete');
+Route::delete('/category/delete/{id}', 'CategoryController@delete');
 
 
 // Article

@@ -42,8 +42,14 @@
           <th>{{ $loop->iteration }}</th>
           <td>{{ $row->name }}</td>
           <td>
-            <a class="badge btn-warning ms" href='{{url("/category/edit/".$row->id)}}'>Edit</a>
-            <a class="badge btn-danger ms" href='{{url("/category/delete/".$row->id)}}'>Hapus</a>
+            <form action='{{url("/category/edit/".$row->id)}}' method="get" style="display:inline-block;">
+            <button class="badge btn-warning ms">Edit</button>
+            </form>
+            <form action='{{url("/category/delete/".$row->id)}}' method="post" style="display:inline-block;">
+            @method('delete')
+            @csrf
+            <button class="badge btn-danger ms">Hapus</button>
+            </form>
           </td>
         </tr>
         @endforeach
