@@ -37,7 +37,13 @@ Route::get('/article', 'ArticleController@index');
 
 Route::get('/article/create/', 'ArticleController@create');
 
-Route::get('/article/edit/', 'ArticleController@edit');
+Route::post('/article/store/', 'ArticleController@store');
+
+Route::get('/article/edit/{id}', 'ArticleController@edit');
+
+Route::post('/article/update/{id}', 'ArticleController@update');
+
+Route::delete('/article/delete/{id}', 'ArticleController@delete');
 
 
 
