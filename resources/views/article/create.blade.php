@@ -6,7 +6,7 @@
 <section class="content">
 <div class="box">
     <div class="box-header with-border">
-        <a href="{{url('category')}}" class="btn btn-warning">
+        <a href="{{url('article')}}" class="btn btn-warning">
             <i class="fa fa-arrow-left"></i> Back
         </a>
         
